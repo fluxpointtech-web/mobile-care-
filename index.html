@@ -1,0 +1,1310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d17">
+<title>Mobile Care | Premium Mobile Repairing Centre</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --bg: #080d17;
+  --panel: #101a2a;
+  --blue: #36a8ff;
+  --cyan: #65e0ff;
+  --white: #f4f8ff;
+  --muted: #9baac0;
+  --line: rgba(255,255,255,.10);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+.container {
+  width: min(1180px, 90%);
+  margin: auto;
+}
+
+section {
+  padding: 105px 0;
+  scroll-margin-top: 85px;
+}
+
+.section-label {
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 17px;
+}
+
+.section-heading {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  color: var(--muted);
+  line-height: 1.9;
+  max-width: 650px;
+}
+
+.gradient-text {
+  background: linear-gradient(100deg, #fff, #43b8ff, #9beaff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* NAVIGATION */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(7,13,24,.82);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+  height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Manrope', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--blue);
+}
+
+.logo-icon {
+  color: var(--cyan);
+  margin-right: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 700;
+  color: #c4d0df;
+  transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--cyan);
+}
+
+.nav-call {
+  padding: 13px 20px;
+  border-radius: 8px;
+  background: linear-gradient(110deg,#168bfa,#50d7ff);
+  color: #04101e !important;
+  font-weight: 800 !important;
+}
+
+.menu-btn {
+  display: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 790px;
+  padding-top: 170px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg,rgba(5,11,21,.97) 0%,rgba(5,11,21,.86) 48%,rgba(5,11,21,.30) 100%),
+    url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=2000&q=85') center/cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: rgba(24,135,255,.13);
+  filter: blur(100px);
+  right: -150px;
+  top: 100px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  animation: fadeUp 1s ease both;
+}
+
+.hero-tag {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 17px;
+  border: 1px solid rgba(95,190,255,.35);
+  border-radius: 50px;
+  background: rgba(40,150,255,.10);
+  color: #a6e5ff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(43px,7vw,82px);
+  line-height: 1.07;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  display: block;
+  color: #50c5ff;
+}
+
+.hero p {
+  margin-top: 27px;
+  color: #c2cede;
+  line-height: 1.9;
+  font-size: 16px;
+  max-width: 570px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 38px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 17px 27px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .35s;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(110deg,#168bfa,#57d9ff);
+  color: #04101c;
+  box-shadow: 0 10px 35px rgba(29,157,255,.22);
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(29,157,255,.42);
+}
+
+.btn-outline {
+  border-color: rgba(255,255,255,.25);
+  color: white;
+  background: rgba(255,255,255,.05);
+}
+
+.btn-outline:hover {
+  border-color: var(--cyan);
+  background: rgba(50,160,255,.12);
+}
+
+.hero-bottom {
+  display: flex;
+  gap: 35px;
+  margin-top: 65px;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  border-left: 2px solid var(--blue);
+  padding-left: 15px;
+}
+
+.hero-stat strong {
+  display: block;
+  font-size: 19px;
+  color: white;
+}
+
+.hero-stat span {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 25px 70px rgba(0,0,0,.35);
+}
+
+.image-badge {
+  position: absolute;
+  bottom: 25px;
+  left: -20px;
+  padding: 23px;
+  border-radius: 12px;
+  background: linear-gradient(135deg,#167fe6,#46ceff);
+  color: #061426;
+  font-weight: 800;
+  box-shadow: 0 12px 35px rgba(0,0,0,.3);
+}
+
+.image-badge strong {
+  display: block;
+  font-size: 24px;
+}
+
+.about-points {
+  margin-top: 30px;
+  display: grid;
+  gap: 18px;
+}
+
+.about-point {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.about-point i {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  color: var(--cyan);
+  background: rgba(49,157,255,.12);
+  border: 1px solid rgba(49,157,255,.25);
+  border-radius: 10px;
+}
+
+.about-point strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.about-point span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* SERVICES */
+
+.services-section {
+  background: linear-gradient(180deg,#0a1220,#0d1726);
+}
+
+.center-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.center-heading .section-description {
+  margin: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.service-card {
+  padding: 32px 26px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+  transition: .4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--cyan);
+  transition: .4s;
+}
+
+.service-card:hover {
+  transform: translateY(-9px);
+  border-color: rgba(72,185,255,.45);
+  background: #122239;
+  box-shadow: 0 20px 50px rgba(0,0,0,.2);
+}
+
+.service-card:hover::before {
+  width: 100%;
+}
+
+.service-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: rgba(48,158,255,.13);
+  color: var(--cyan);
+  font-size: 23px;
+  margin-bottom: 23px;
+}
+
+.service-card h3 {
+  font-family: 'Manrope',sans-serif;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* WHY CHOOSE US */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.why-image img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+.why-list {
+  display: grid;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.why-item {
+  display: flex;
+  gap: 17px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255,255,255,.025);
+  transition: .3s;
+}
+
+.why-item:hover {
+  transform: translateX(7px);
+  border-color: rgba(64,183,255,.4);
+}
+
+.why-item i {
+  color: var(--cyan);
+  font-size: 23px;
+  margin-top: 3px;
+}
+
+.why-item h3 {
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+
+.why-item p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* CONTACT */
+
+.contact-section {
+  background: linear-gradient(180deg,#0d1726,#080d17);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 35px;
+  margin-top: 45px;
+}
+
+.contact-info {
+  display: grid;
+  gap: 17px;
+}
+
+.contact-card {
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.035);
+  border-radius: 13px;
+  display: flex;
+  gap: 17px;
+  align-items: flex-start;
+}
+
+.contact-card i {
+  font-size: 22px;
+  color: var(--cyan);
+  margin-top: 4px;
+}
+
+.contact-card h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.map-box {
+  min-height: 350px;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid var(--line);
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  border: 0;
+  filter: grayscale(20%);
+}
+
+/* CTA */
+
+.cta {
+  padding: 75px 0;
+  background:
+    linear-gradient(100deg,rgba(8,25,45,.96),rgba(12,76,125,.82)),
+    url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80') center/cover;
+  text-align: center;
+}
+
+.cta h2 {
+  font-family: 'Manrope',sans-serif;
+  font-size: clamp(30px,5vw,48px);
+  margin-bottom: 17px;
+}
+
+.cta p {
+  color: #c2e6fa;
+  margin-bottom: 28px;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 55px 0 25px;
+  background: #050a12;
+  border-top: 1px solid var(--line);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 45px;
+  margin-bottom: 40px;
+}
+
+.footer-about p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  margin-top: 17px;
+  max-width: 350px;
+}
+
+.footer-column h3 {
+  font-size: 14px;
+  margin-bottom: 19px;
+}
+
+.footer-column a {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 13px;
+  transition: .3s;
+}
+
+.footer-column a:hover {
+  color: var(--cyan);
+}
+
+.copyright {
+  border-top: 1px solid var(--line);
+  padding-top: 23px;
+  color: #718096;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* FLOATING BUTTONS */
+
+.float-buttons {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 900;
+  display: grid;
+  gap: 12px;
+}
+
+.float-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 23px;
+  color: white;
+  box-shadow: 0 8px 25px rgba(0,0,0,.35);
+  transition: .3s;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+.float-call {
+  background: linear-gradient(135deg,#168bfa,#50d7ff);
+  color: #061426;
+}
+
+.float-wa {
+  background: #20c76b;
+}
+
+/* REVEAL ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity .8s ease,transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeUp {
+  from {opacity:0;transform:translateY(35px)}
+  to {opacity:1;transform:translateY(0)}
+}
+
+@keyframes pulse {
+  0%,100% {box-shadow:0 0 0 0 rgba(51,174,255,.25)}
+  50% {box-shadow:0 0 0 13px rgba(51,174,255,0)}
+}
+
+.hero-tag i {
+  animation: pulse 2s infinite;
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+  .nav-links {
+    gap: 17px;
+  }
+
+  .about-grid,.why-grid {
+    gap: 35px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:700px) {
+  .navbar {
+    height: 72px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #091321;
+    padding: 25px 5%;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-call {
+    width: 100%;
+    text-align: center;
+  }
+
+  section {
+    padding: 75px 0;
+  }
+
+  .hero {
+    min-height: 750px;
+    padding-top: 130px;
+    background-position: 62% center;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero-bottom {
+    gap: 20px;
+  }
+
+  .about-grid,.why-grid,.contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image img,.why-image img {
+    height: 330px;
+  }
+
+  .image-badge {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .contact-grid {
+    gap: 25px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="#home" class="logo">
+      <i class="fa-solid fa-mobile-screen-button logo-icon"></i>
+      MOBILE<span>CARE.</span>
+    </a>
+
+    <div class="menu-btn" id="menuBtn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:09212608023" class="nav-call">
+        <i class="fa-solid fa-phone"></i> CALL NOW
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE 1: HOME -->
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <i class="fa-solid fa-circle-check"></i>
+        PROFESSIONAL MOBILE REPAIRING
+      </div>
+
+      <h1>
+        Precision Repairs.
+        <span>Premium Care.</span>
+        Perfect Performance.
+      </h1>
+
+      <p>
+        Your smartphone deserves expert attention.
+        Experience professional mobile repair solutions,
+        careful diagnostics and quality-focused service at Mobile Care.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="tel:09212608023" class="btn btn-primary">
+          <i class="fa-solid fa-phone"></i> CALL NOW
+        </a>
+
+        <a href="#services" class="btn btn-outline">
+          <i class="fa-solid fa-arrow-right"></i> EXPLORE SERVICES
+        </a>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-stat">
+          <strong>Expert Care</strong>
+          <span>Professional Attention</span>
+        </div>
+        <div class="hero-stat">
+          <strong>All Major Brands</strong>
+          <span>Multi-brand Solutions</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Customer First</strong>
+          <span>Service Focused</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2: ABOUT -->
+
+<section id="about">
+  <div class="container about-grid">
+
+    <div class="about-image reveal">
+      <img
+        src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=1000&q=85"
+        alt="Professional electronics repair workspace">
+      <div class="image-badge">
+        <strong>MOBILE CARE</strong>
+        Professional Repair Solutions
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="section-label">ABOUT MOBILE CARE</div>
+      <h2 class="section-heading">
+        Bringing Your <span class="gradient-text">Smartphone</span>
+        Back to Life.
+      </h2>
+
+      <p class="section-description">
+        Mobile Care is dedicated to providing professional mobile
+        repairing solutions in Vikaspuri, New Delhi. From everyday
+        smartphone problems to complex technical issues, our focus
+        is on careful diagnosis and dependable repair service.
+      </p>
+
+      <div class="about-points">
+        <div class="about-point">
+          <i class="fa-solid fa-screwdriver-wrench"></i>
+          <div>
+            <strong>Professional Repair Approach</strong>
+            <span>Careful attention to every device</span>
+          </div>
+        </div>
+
+        <div class="about-point">
+          <i class="fa-solid fa-microchip"></i>
+          <div>
+            <strong>Technical Solutions</strong>
+            <span>Hardware and software troubleshooting</span>
+          </div>
+        </div>
+
+        <div class="about-point">
+          <i class="fa-solid fa-handshake"></i>
+          <div>
+            <strong>Customer-Focused Service</strong>
+            <span>Clear communication and personal attention</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PAGE 3: SERVICES -->
+
+<section class="services-section" id="services">
+  <div class="container">
+
+    <div class="center-heading reveal">
+      <div class="section-label">OUR EXPERTISE</div>
+      <h2 class="section-heading">
+        Complete <span class="gradient-text">Mobile Repair</span>
+        Solutions
+      </h2>
+      <p class="section-description">
+        Comprehensive smartphone repair and technical services
+        designed to bring your device back to its best.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <h3>Display & Screen Replacement</h3>
+        <p>Solutions for cracked screens, display damage, touch issues and screen-related problems.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-battery-full"></i></div>
+        <h3>Battery Replacement</h3>
+        <p>Battery diagnostics, battery replacement and charging performance troubleshooting.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-plug"></i></div>
+        <h3>Charging Port Repair</h3>
+        <p>Solutions for loose charging connections, charging port faults and charging issues.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-camera"></i></div>
+        <h3>Camera Repair</h3>
+        <p>Camera troubleshooting for blurry images, camera faults and front or rear camera issues.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-volume-high"></i></div>
+        <h3>Speaker & Microphone Repair</h3>
+        <p>Audio troubleshooting for speaker, microphone, earpiece and sound-related problems.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-power-off"></i></div>
+        <h3>Power Button Repair</h3>
+        <p>Repair solutions for faulty power buttons, volume buttons and physical controls.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-wifi"></i></div>
+        <h3>Network & Connectivity</h3>
+        <p>Technical troubleshooting for Wi-Fi, Bluetooth, SIM detection and network problems.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3>Motherboard Repair</h3>
+        <p>Advanced hardware diagnostics and motherboard-level repair solutions.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Software & Operating System</h3>
+        <p>Software troubleshooting, system errors, updates and performance-related solutions.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-droplet"></i></div>
+        <h3>Water Damage Diagnostics</h3>
+        <p>Device inspection and technical assessment for liquid exposure and moisture damage.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-fingerprint"></i></div>
+        <h3>Sensor & Fingerprint Repair</h3>
+        <p>Technical solutions for fingerprint sensors, proximity sensors and related components.</p>
+      </div>
+
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fa-solid fa-toolbox"></i></div>
+        <h3>General Mobile Repair</h3>
+        <p>Professional troubleshooting for various smartphone hardware and software faults.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 4: WHY CHOOSE US -->
+
+<section id="why">
+  <div class="container why-grid">
+
+    <div class="why-image reveal">
+      <img
+        src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1000&q=85"
+        alt="Technician working with electronic equipment">
+    </div>
+
+    <div class="reveal">
+      <div class="section-label">THE MOBILE CARE DIFFERENCE</div>
+
+      <h2 class="section-heading">
+        Care That Goes Beyond <span class="gradient-text">Repair.</span>
+      </h2>
+
+      <p class="section-description">
+        Every smartphone deserves attention to detail.
+        Our approach is focused on professional service,
+        careful handling and customer satisfaction.
+      </p>
+
+      <div class="why-list">
+
+        <div class="why-item">
+          <i class="fa-solid fa-user-gear"></i>
+          <div>
+            <h3>Professional Attention</h3>
+            <p>Every device receives careful inspection and a service-focused approach.</p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <div>
+            <h3>Careful Diagnostics</h3>
+            <p>Identify device problems before proceeding with appropriate repair solutions.</p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <h3>Device Care</h3>
+            <p>Attention to detail and responsible handling throughout the repair process.</p>
+          </div>
+        </div>
+
+        <div class="why-item">
+          <i class="fa-solid fa-heart"></i>
+          <div>
+            <h3>Customer Satisfaction</h3>
+            <p>Committed to helpful communication and a positive service experience.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 5: CONTACT -->
+
+<section class="contact-section" id="contact">
+  <div class="container">
+
+    <div class="center-heading reveal">
+      <div class="section-label">GET IN TOUCH</div>
+      <h2 class="section-heading">
+        Visit <span class="gradient-text">Mobile Care.</span>
+      </h2>
+      <p class="section-description">
+        Get professional mobile repairing assistance at our
+        Vikaspuri service location in New Delhi.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+
+        <div class="contact-card">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <h3>OUR LOCATION</h3>
+            <p>K-130, Krishna Park Extension, 3 & 4, Outer Ring Road, Opposite Pillar No. Crossing, Vikaspuri, New Delhi, Delhi 110018</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <h3>CALL US</h3>
+            <p>09212608023</p>
+            <a href="tel:09212608023" class="gradient-text">Connect With Mobile Care</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div>
+            <h3>WHATSAPP</h3>
+            <p>Connect with us directly through WhatsApp.</p>
+            <a href="https://wa.me/919212608023" target="_blank" rel="noopener" class="gradient-text">Message Mobile Care</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <h3>VISIT OUR STORE</h3>
+            <p>Visit our Vikaspuri location for mobile repair assistance.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="map-box reveal">
+        <iframe
+          src="https://www.google.com/maps?q=K-130%20Krishna%20Park%20Extension%20Vikaspuri%20New%20Delhi%20110018&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mobile Care location map">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PREMIUM CTA -->
+
+<div class="cta">
+  <div class="container reveal">
+    <div class="section-label">MOBILE CARE • VIKASPURI</div>
+    <h2>Your Device Deserves <span class="gradient-text">Expert Care.</span></h2>
+    <p>Professional Mobile Repairing. Reliable Solutions. Complete Care.</p>
+
+    <a href="tel:09212608023" class="btn btn-primary">
+      <i class="fa-solid fa-phone"></i> CALL MOBILE CARE
+    </a>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-about">
+        <a href="#home" class="logo">
+          <i class="fa-solid fa-mobile-screen-button logo-icon"></i>
+          MOBILE<span>CARE.</span>
+        </a>
+
+        <p>
+          Your trusted destination for professional mobile
+          repairing solutions in Vikaspuri, New Delhi.
+          Precision Repairs. Premium Care.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>QUICK LINKS</h3>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Our Services</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>CONTACT DETAILS</h3>
+        <a href="tel:09212608023">09212608023</a>
+        <a href="https://wa.me/919212608023" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#contact">Vikaspuri, New Delhi</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> MOBILE CARE. All Rights Reserved.
+      <br><br>
+      Precision Repairs. Premium Care.
+    </div>
+
+  </div>
+</footer>
+
+<!-- FLOATING CONTACT BUTTONS -->
+
+<div class="float-buttons">
+  <a href="tel:09212608023" class="float-btn float-call" aria-label="Call Mobile Care">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <a href="https://wa.me/919212608023" target="_blank" rel="noopener" class="float-btn float-wa" aria-label="WhatsApp Mobile Care">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
+
+<script>
+
+// MOBILE NAVIGATION
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+
+  const icon = menuBtn.querySelector("i");
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-xmark");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+
+    const icon = menuBtn.querySelector("i");
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+  });
+});
+
+// SCROLL REVEAL ANIMATION
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+  observer.observe(element);
+});
+
+// ACTIVE NAVIGATION
+
+const sections = document.querySelectorAll("main section");
+const navItems = document.querySelectorAll(".nav-links a[href^='#']");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 150) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navItems.forEach(link => {
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === "#" + current
+    );
+  });
+});
+
+// AUTOMATIC COPYRIGHT YEAR
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
